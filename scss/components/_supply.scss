@@ -1,0 +1,10 @@
+.supply {
+  h2 {
+    margin-bottom: 20px;
+    text-align: center;
+
+    @include breakpoint($sm) {
+      text-align: left;
+    }
+  }
+}

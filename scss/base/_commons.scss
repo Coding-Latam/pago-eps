@@ -1,0 +1,68 @@
+.container {
+  margin: 0 auto;
+  max-width: 100%;
+
+  @include breakpoint($sm) {
+    max-width: 690px;
+  }
+
+  @include breakpoint($md) {
+    max-width: 920px;
+  }
+
+  @include breakpoint($lg) {
+    max-width: 1170px;
+  }
+}
+
+.intro {
+  background-color: $color-white;
+  padding: 50px 0;
+  text-align: center;
+
+  img {
+    max-width: 100px;
+  }
+
+  p {
+    margin: 0 auto;
+    max-width: 250px;
+    font-size: 18px;
+  }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+  @include breakpoint($sm) {
+    justify-content: flex-start;
+  }
+
+  &__label {
+    background: none;
+    font-size: 14px;
+    padding: 0;
+
+    @include breakpoint($sm) {
+      min-width: 200px;
+    }
+
+    @include breakpoint($lg) {
+      font-size: 16px;
+    }
+  }
+
+  &__input {
+    padding: 5px 0 5px 20px;
+  }
+}
+
+.wrapper {
+  @include breakpoint($lg) {
+    display: flex;
+    justify-content: space-between;
+  }
+}

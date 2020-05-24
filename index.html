@@ -3,23 +3,204 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>EPS Tacna - Plataforma de pagos en linea</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <nav class="nav">
+      <div class="nav__logo">
+        <img src="./images/logo.png" alt="EPS Logo" />
+        <span>Plataforma de pago online</span>
+      </div>
+      <div class="nav__user" onclick="toggleSettings()">
+        <i class="icon icon-user"></i>
+      </div>
+      <ul class="nav__settings" id="menu">
+        <li><a href="">Mis datos</a></li>
+        <li><a href="">Salir</a></li>
+      </ul>
+    </nav>
     <main>
-      <h1>Mi proyecto</h1>
-      <p>
-        <i class="icon icon-home"></i>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, velit!
-        Labore, laboriosam quos. Sint et, autem delectus quibusdam, aliquid
-        perspiciatis dolore voluptates facere praesentium rerum tempora incidunt
-        voluptatem nobis doloribus.
-      </p>
+      <div class="container">
+        <!-- <div class="intro">
+          <img src="/images/water-2.svg" alt="" />
+          <p>Bienvenido a la plataforma de pagos en linea de EPS.</p>
+        </div> -->
+        <form action="/" class="form-search">
+          <p>Ingrese el suministro a pagar:</p>
+          <div class="form-content">
+            <div class="form-group">
+              <input
+                type="tel"
+                placeholder="Suministro"
+                class="form-input"
+                maxlength="6"
+              />
+            </div>
+            <div class="form-group">
+              <a class="btn blue" href="/">Buscar</a>
+            </div>
+          </div>
+        </form>
+        <div class="wrapper">
+          <div class="tabs">
+            <div class="tab">
+              <input type="radio" id="tab-1" name="tab-group-1" checked />
+              <label for="tab-1">
+                <i class="icon icon-chart"></i>Estado de cuenta
+              </label>
+              <div class="content">
+                <div class="supply">
+                  <h2>Datos del suministro</h2>
+                  <div class="item">
+                    <span class="item__label">Titular</span>
+                    <input
+                      type="text"
+                      class="item__input"
+                      disabled
+                      placeholder="Angelo Leva"
+                    />
+                  </div>
+                  <div class="item">
+                    <span class="item__label">Cod Suministro</span>
+                    <input
+                      type="text"
+                      class="item__input"
+                      disabled
+                      placeholder="279071"
+                    />
+                  </div>
+                  <div class="item">
+                    <span class="item__label">Direccion</span>
+                    <input
+                      type="text"
+                      class="item__input"
+                      disabled
+                      placeholder="Calle Tacna 159"
+                    />
+                  </div>
+                </div>
+
+                <div class="payment payment-status">
+                  <h2>Datos de pago</h2>
+                  <div class="item">
+                    <span class="item__label">Estado</span>
+                    <p class="warning">VENCIDO</p>
+                  </div>
+                  <div class="item">
+                    <span class="item__label">Ultimo dia de pago</span>
+                    <input
+                      type="text"
+                      class="item__input"
+                      disabled
+                      placeholder="31/05/2020"
+                    />
+                  </div>
+                  <div class="item">
+                    <span class="item__label">Deuda a la fecha</span>
+                    <input
+                      type="text"
+                      class="item__input"
+                      disabled
+                      placeholder="272.50"
+                    />
+                  </div>
+                </div>
+                <div class="payment payment-actions">
+                  <button onclick="showSuccesModal()" class="btn blue" href="/">
+                    <i class="icon icon-card"></i>Pagar ahora
+                  </button>
+                  <small>Pago realizado con tarjetas VISA</small>
+                  <small>Sitio web autorizado y verificado por Visa</small>
+                </div>
+              </div>
+            </div>
+            <div class="tab">
+              <input type="radio" id="tab-2" name="tab-group-1" />
+              <label for="tab-2">
+                <i class="icon icon-card"></i>Recibos pagados
+              </label>
+              <div class="content">
+                <div class="payment payment-list">
+                  <h2>Pagos registrados</h2>
+
+                  <div class="table">
+                    <div class="table__content">
+                      <table>
+                        <thead>
+                          <th>Mes</th>
+                          <th>Fecha de pago</th>
+                          <th>Centro de pago</th>
+                          <th>Importe</th>
+                          <th>Ver recibo</th>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><i class="icon icon-circle-right"></i>Abril</td>
+                            <td><i class="icon icon-calendar"></i>05/2020</td>
+                            <td>
+                              <i class="icon icon-location"></i>Banco de la
+                              Nacion
+                            </td>
+                            <td><i class="icon icon-money"></i>S/. 300.00</td>
+                            <td><i class="icon icon-download"></i></td>
+                          </tr>
+                          <tr>
+                            <td><i class="icon icon-circle-right"></i>Abril</td>
+                            <td><i class="icon icon-calendar"></i>05/2020</td>
+                            <td>
+                              <i class="icon icon-location"></i>Banco de la
+                              Nacion
+                            </td>
+                            <td><i class="icon icon-money"></i>S/. 300.00</td>
+                            <td><i class="icon icon-download"></i></td>
+                          </tr>
+                          <tr>
+                            <td><i class="icon icon-circle-right"></i>Abril</td>
+                            <td><i class="icon icon-calendar"></i>05/2020</td>
+                            <td>
+                              <i class="icon icon-location"></i>Banco de la
+                              Nacion
+                            </td>
+                            <td><i class="icon icon-money"></i>S/. 300.00</td>
+                            <td><i class="icon icon-download"></i></td>
+                          </tr>
+                          <tr>
+                            <td><i class="icon icon-circle-right"></i>Abril</td>
+                            <td><i class="icon icon-calendar"></i>05/2020</td>
+                            <td>
+                              <i class="icon icon-location"></i>Banco de la
+                              Nacion
+                            </td>
+                            <td><i class="icon icon-money"></i>S/. 300.00</td>
+                            <td><i class="icon icon-download"></i></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <aside class="contact">
+            <div class="contact__content">
+              <h2>Contactenos</h2>
+              <div class="contact__info">
+                <p><i class="icon icon-home"></i>Av. 2 de Mayo Nº372</p>
+                <p><i class="icon icon-phone"></i>(052)-583446</p>
+                <p><i class="icon icon-mail"></i>pagovisa@epstacna.com.pe</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>

@@ -1,0 +1,44 @@
+.table {
+  &__content {
+    overflow-x: auto;
+  }
+
+  table {
+    border-collapse: collapse;
+
+    th {
+      padding: 0 0 10px;
+      min-width: 100px;
+
+      @include breakpoint($md) {
+        min-width: 150px;
+      }
+
+      &:nth-child(3) {
+        min-width: 200px;
+      }
+    }
+
+    td {
+      border-top: 1px solid $color-gray;
+      padding: 8px 0;
+      text-align: center;
+
+      .icon {
+        margin-right: 5px;
+
+        &-circle-right {
+          color: #34495e;
+        }
+
+        &-location {
+          color: $color-red;
+        }
+
+        &-money {
+          color: #27ae60;
+        }
+      }
+    }
+  }
+}
