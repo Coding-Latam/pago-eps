@@ -1,7 +1,10 @@
 .payment {
-  &-status {
-    h2 {
-      margin: 20px 0;
+  h2 {
+    margin: 20px 0;
+    text-align: center;
+
+    @include breakpoint($sm) {
+      text-align: left;
     }
   }
 

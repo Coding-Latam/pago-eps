@@ -6,15 +6,20 @@ form {
     p {
       margin-bottom: 20px;
       text-align: center;
+
+      @include breakpoint($sm) {
+        text-align: left;
+      }
     }
 
     .form-content {
       display: flex;
       align-items: center;
       justify-content: center;
-    }
 
-    .form-group {
+      @include breakpoint($sm) {
+        justify-content: flex-start;
+      }
     }
 
     .form-input {

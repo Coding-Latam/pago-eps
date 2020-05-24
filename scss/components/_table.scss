@@ -4,7 +4,10 @@
   }
 
   table {
+    border-collapse: collapse;
+
     th {
+      padding: 0 0 10px;
       min-width: 100px;
 
       &:nth-child(3) {
@@ -19,6 +22,18 @@
 
       .icon {
         margin-right: 5px;
+
+        &-circle-right {
+          color: #34495e;
+        }
+
+        &-location {
+          color: $color-red;
+        }
+
+        &-money {
+          color: #27ae60;
+        }
       }
     }
   }

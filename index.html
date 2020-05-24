@@ -22,11 +22,20 @@
     </nav>
     <main>
       <div class="container">
+        <!-- <div class="intro">
+          <img src="/images/water-2.svg" alt="" />
+          <p>Bienvenido a la plataforma de pagos en linea de EPS.</p>
+        </div> -->
         <form action="/" class="form-search">
           <p>Ingrese el suministro a pagar:</p>
           <div class="form-content">
             <div class="form-group">
-              <input type="tel" placeholder="Suministro" class="form-input" />
+              <input
+                type="tel"
+                placeholder="Suministro"
+                class="form-input"
+                maxlength="6"
+              />
             </div>
             <div class="form-group">
               <a class="btn blue" href="/">Buscar</a>
@@ -71,7 +80,7 @@
                 </div>
               </div>
 
-              <div class="payment-status">
+              <div class="payment payment-status">
                 <h2>Datos de pago</h2>
                 <div class="item">
                   <span class="item__label">Estado</span>
@@ -96,7 +105,7 @@
                   />
                 </div>
               </div>
-              <div class="payment-actions">
+              <div class="payment payment-actions">
                 <button onclick="showErrorModal()" class="btn blue" href="/">
                   <i class="icon icon-card"></i>Pagar ahora
                 </button>
@@ -111,55 +120,59 @@
               <i class="icon icon-card"></i>Recibos pagados
             </label>
             <div class="content">
-              <div class="table">
-                <div class="table__content">
-                  <table>
-                    <thead>
-                      <th>Mes</th>
-                      <th>Fecha de pago</th>
-                      <th>Centro de pago</th>
-                      <th>Importe</th>
-                      <th>Ver recibo</th>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><i class="icon icon-circle-right"></i>Abril</td>
-                        <td><i class="icon icon-calendar"></i>05/2020</td>
-                        <td>
-                          <i class="icon icon-location"></i>Banco de la Nacion
-                        </td>
-                        <td><i class="icon icon-money"></i>S/. 300.00</td>
-                        <td><i class="icon icon-download"></i></td>
-                      </tr>
-                      <tr>
-                        <td><i class="icon icon-circle-right"></i>Abril</td>
-                        <td><i class="icon icon-calendar"></i>05/2020</td>
-                        <td>
-                          <i class="icon icon-location"></i>Banco de la Nacion
-                        </td>
-                        <td><i class="icon icon-money"></i>S/. 300.00</td>
-                        <td><i class="icon icon-download"></i></td>
-                      </tr>
-                      <tr>
-                        <td><i class="icon icon-circle-right"></i>Abril</td>
-                        <td><i class="icon icon-calendar"></i>05/2020</td>
-                        <td>
-                          <i class="icon icon-location"></i>Banco de la Nacion
-                        </td>
-                        <td><i class="icon icon-money"></i>S/. 300.00</td>
-                        <td><i class="icon icon-download"></i></td>
-                      </tr>
-                      <tr>
-                        <td><i class="icon icon-circle-right"></i>Abril</td>
-                        <td><i class="icon icon-calendar"></i>05/2020</td>
-                        <td>
-                          <i class="icon icon-location"></i>Banco de la Nacion
-                        </td>
-                        <td><i class="icon icon-money"></i>S/. 300.00</td>
-                        <td><i class="icon icon-download"></i></td>
-                      </tr>
-                    </tbody>
-                  </table>
+              <div class="payment payment-list">
+                <h2>Pagos registrados</h2>
+
+                <div class="table">
+                  <div class="table__content">
+                    <table>
+                      <thead>
+                        <th>Mes</th>
+                        <th>Fecha de pago</th>
+                        <th>Centro de pago</th>
+                        <th>Importe</th>
+                        <th>Ver recibo</th>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><i class="icon icon-circle-right"></i>Abril</td>
+                          <td><i class="icon icon-calendar"></i>05/2020</td>
+                          <td>
+                            <i class="icon icon-location"></i>Banco de la Nacion
+                          </td>
+                          <td><i class="icon icon-money"></i>S/. 300.00</td>
+                          <td><i class="icon icon-download"></i></td>
+                        </tr>
+                        <tr>
+                          <td><i class="icon icon-circle-right"></i>Abril</td>
+                          <td><i class="icon icon-calendar"></i>05/2020</td>
+                          <td>
+                            <i class="icon icon-location"></i>Banco de la Nacion
+                          </td>
+                          <td><i class="icon icon-money"></i>S/. 300.00</td>
+                          <td><i class="icon icon-download"></i></td>
+                        </tr>
+                        <tr>
+                          <td><i class="icon icon-circle-right"></i>Abril</td>
+                          <td><i class="icon icon-calendar"></i>05/2020</td>
+                          <td>
+                            <i class="icon icon-location"></i>Banco de la Nacion
+                          </td>
+                          <td><i class="icon icon-money"></i>S/. 300.00</td>
+                          <td><i class="icon icon-download"></i></td>
+                        </tr>
+                        <tr>
+                          <td><i class="icon icon-circle-right"></i>Abril</td>
+                          <td><i class="icon icon-calendar"></i>05/2020</td>
+                          <td>
+                            <i class="icon icon-location"></i>Banco de la Nacion
+                          </td>
+                          <td><i class="icon icon-money"></i>S/. 300.00</td>
+                          <td><i class="icon icon-download"></i></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>

@@ -1,5 +1,6 @@
 .nav {
   align-items: center;
+  background-color: $color-white;
   border-bottom: 1px solid $color-gray;
   box-shadow: 0 2px 4px 0 rgba(23, 31, 39, 0.1);
   display: flex;
@@ -22,7 +23,7 @@
 
     .icon {
       color: $color-white;
-      font-size: 30px;
+      font-size: 18px;
     }
   }
 }
