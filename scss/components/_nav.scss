@@ -6,6 +6,7 @@
   display: flex;
   justify-content: space-between;
   padding: 8px 15px;
+  position: relative;
 
   &__logo {
     align-items: center;
@@ -14,16 +15,48 @@
     img {
       max-width: 75px;
     }
+
+    span {
+      margin-left: 10px;
+    }
   }
 
   &__user {
     background: $color-blue-dark;
     border-radius: 50%;
+    cursor: pointer;
     padding: 8px;
 
     .icon {
       color: $color-white;
       font-size: 18px;
+    }
+  }
+
+  &__settings {
+    display: none;
+
+    &.show {
+      background-color: $color-white;
+      box-shadow: 0 2px 12px 0px rgba(60, 60, 60, 0.32);
+      display: block;
+      position: absolute;
+      right: 15px;
+      top: 40px;
+
+      li {
+        display: block;
+        padding: 10px 20px;
+        text-align: right;
+
+        &:first-child {
+          border-bottom: 1px solid $color-gray;
+        }
+
+        a {
+          font-size: 14px;
+        }
+      }
     }
   }
 }

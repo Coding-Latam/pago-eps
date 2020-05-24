@@ -49,9 +49,20 @@
     @include breakpoint($sm) {
       min-width: 200px;
     }
+
+    @include breakpoint($lg) {
+      font-size: 16px;
+    }
   }
 
   &__input {
     padding: 5px 0 5px 20px;
+  }
+}
+
+.wrapper {
+  @include breakpoint($lg) {
+    display: flex;
+    justify-content: space-between;
   }
 }

@@ -1,7 +1,7 @@
 @import "scss/base/variables";
+@import "scss/base/mixins";
 @import "scss/base/base";
 @import "scss/base/fonts";
-@import "scss/base/mixins";
 @import "scss/base/commons";
 
 @import "scss/components/button";
@@ -11,3 +11,4 @@
 @import "scss/components/supply";
 @import "scss/components/payment";
 @import "scss/components/table";
+@import "scss/components/contact";

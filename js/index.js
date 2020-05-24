@@ -15,3 +15,9 @@ function showErrorModal() {
     confirmButtonText: "Ok",
   });
 }
+
+function toggleSettings() {
+  let menu = document.getElementById("menu");
+
+  menu.classList.toggle("show");
+}

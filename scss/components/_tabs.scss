@@ -9,6 +9,15 @@
     max-width: 100%;
   }
 
+  @include breakpoint($md) {
+    min-height: 450px;
+  }
+
+  @include breakpoint($lg) {
+    flex: 4;
+    max-width: 880px;
+  }
+
   .tab {
     float: left;
 
@@ -23,9 +32,9 @@
     }
 
     label {
-      background: $color-gray;
+      background: rgba(204, 204, 204, 0.30980392156862746);
+      cursor: pointer;
       padding: 10px;
-      border: 1px solid $color-gray;
       border-radius: 0 5px 0 0;
       position: relative;
       top: -3px;
@@ -41,12 +50,27 @@
       left: 0;
       top: 25px;
       background-color: $color-white;
-      border: 1px solid $color-gray;
       border-radius: 0 5px 5px 5px;
+      box-shadow: 0 2px 12px 0px rgba(60, 60, 60, 0.1);
       overflow: hidden;
       right: 0;
       bottom: 0;
       padding: 40px 20px 20px;
+
+      @include breakpoint($sm) {
+        padding: 40px;
+      }
+
+      @include breakpoint($md) {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+
+      @include breakpoint($lg) {
+        padding: 40px 15px;
+      }
 
       > * {
         opacity: 0;
