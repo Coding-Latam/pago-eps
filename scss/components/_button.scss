@@ -1,0 +1,17 @@
+button,
+a {
+  border: 0;
+  color: $color-black;
+  white-space: nowrap;
+  max-width: 200px;
+  text-decoration: none;
+
+  &.btn {
+    padding: 10px 15px;
+  }
+
+  &.blue {
+    background-color: $color-blue-dark;
+    color: $color-white;
+  }
+}
