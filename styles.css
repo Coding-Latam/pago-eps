@@ -1,5 +1,5 @@
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -19,8 +19,17 @@ h1 {
   line-height: 34px;
 }
 
+input {
+  padding: 0;
+  margin: 0;
+}
+
 p {
   margin: 0;
+}
+
+p.warning {
+  color: #e74c3c;
 }
 
 @font-face {
@@ -118,6 +127,52 @@ p {
   }
 }
 
+.item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.item__label {
+  background: none;
+  font-size: 14px;
+  padding: 0;
+}
+
+.item__input {
+  padding: 5px 0 5px 20px;
+}
+
+.payment {
+  margin-top: 50px;
+}
+
+.payment .btn {
+  margin: 0 auto;
+  width: 220px;
+  display: block;
+  text-align: center;
+}
+
+.payment .btn .icon {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.payment small {
+  display: block;
+  font-size: 11px;
+  margin: 5px 0;
+  text-align: center;
+}
+
 button,
 a {
   border: 0;
@@ -125,6 +180,7 @@ a {
   white-space: nowrap;
   max-width: 200px;
   text-decoration: none;
+  outline: none;
 }
 
 button.btn,
@@ -178,9 +234,10 @@ a.blue {
 
 .tabs {
   position: relative;
-  min-height: 250px;
+  max-width: 340px;
+  margin: 30px auto;
+  min-height: 470px;
   clear: both;
-  margin: 25px 0;
 }
 
 .tabs .tab {
@@ -188,7 +245,7 @@ a.blue {
 }
 
 .tabs .tab [type="radio"] {
-  opacity: 0;
+  display: none;
 }
 
 .tabs .tab label {
@@ -219,17 +276,55 @@ a.blue {
   transition: all 0.5s ease;
 }
 
-.tabs .tab [type="radio"]:checked label,
-.tabs .tab [type="radio"]:checked content {
-  opacity: 1;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+.tabs .tab [type="radio"]:checked ~ label,
+.tabs .tab [type="radio"]:checked ~ .content {
   z-index: 1;
 }
 
-.tabs .tab [type="radio"]:checked label {
+.tabs .tab [type="radio"]:checked ~ label > *,
+.tabs .tab [type="radio"]:checked ~ .content > * {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.tabs .tab [type="radio"]:checked ~ label {
   background: #ffffff;
   border-bottom: 1px solid #000000;
   z-index: 2;
+}
+
+form.form-search {
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+form.form-search p {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form.form-search .form-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+form.form-search .form-input {
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  padding: 10px 15px;
+  margin-right: 10px;
+}
+
+form.form-search .btn {
+  border-radius: 3px;
+  padding: 9px 15px;
 }
 /*# sourceMappingURL=styles.css.map */

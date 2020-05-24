@@ -1,0 +1,32 @@
+form {
+  &.form-search {
+    margin: 0 auto;
+    padding: 30px 0;
+
+    p {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .form-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .form-group {
+    }
+
+    .form-input {
+      border: 1px solid $color-gray;
+      border-radius: 3px;
+      padding: 10px 15px;
+      margin-right: 10px;
+    }
+
+    .btn {
+      border-radius: 3px;
+      padding: 9px 15px;
+    }
+  }
+}
