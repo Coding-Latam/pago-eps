@@ -1,0 +1,55 @@
+.tabs {
+  position: relative;
+  min-height: 250px;
+  clear: both;
+  margin: 25px 0;
+
+  .tab {
+    float: left;
+
+    [type="radio"] {
+      opacity: 0;
+    }
+
+    label {
+      background: $color-gray;
+      padding: 10px;
+      border: 1px solid $color-black;
+      position: relative;
+      left: 1px;
+    }
+
+    .content {
+      position: absolute;
+      left: 0;
+      top: 25px;
+      background-color: $color-white;
+      border: 1px solid $color-black;
+      overflow: hidden;
+      right: 0;
+      bottom: 0;
+      padding: 20px;
+
+      > * {
+        opacity: 0;
+        transform: translateX(-90px);
+        transition: all 0.5s ease;
+      }
+    }
+
+    [type="radio"]:checked {
+      label,
+      content {
+        opacity: 1;
+        transform: translateX(0);
+        z-index: 1;
+      }
+
+      label {
+        background: $color-white;
+        border-bottom: 1px solid $color-black;
+        z-index: 2;
+      }
+    }
+  }
+}

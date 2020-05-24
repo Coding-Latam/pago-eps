@@ -175,4 +175,61 @@ a.blue {
   color: #ffffff;
   font-size: 30px;
 }
+
+.tabs {
+  position: relative;
+  min-height: 250px;
+  clear: both;
+  margin: 25px 0;
+}
+
+.tabs .tab {
+  float: left;
+}
+
+.tabs .tab [type="radio"] {
+  opacity: 0;
+}
+
+.tabs .tab label {
+  background: #cccccc;
+  padding: 10px;
+  border: 1px solid #000000;
+  position: relative;
+  left: 1px;
+}
+
+.tabs .tab .content {
+  position: absolute;
+  left: 0;
+  top: 25px;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  overflow: hidden;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+}
+
+.tabs .tab .content > * {
+  opacity: 0;
+  -webkit-transform: translateX(-90px);
+          transform: translateX(-90px);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.tabs .tab [type="radio"]:checked label,
+.tabs .tab [type="radio"]:checked content {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  z-index: 1;
+}
+
+.tabs .tab [type="radio"]:checked label {
+  background: #ffffff;
+  border-bottom: 1px solid #000000;
+  z-index: 2;
+}
 /*# sourceMappingURL=styles.css.map */
