@@ -364,4 +364,26 @@ form.form-search .btn {
   margin: 5px 0;
   text-align: center;
 }
+
+.table__content {
+  overflow-x: auto;
+}
+
+.table table th {
+  min-width: 100px;
+}
+
+.table table th:nth-child(3) {
+  min-width: 200px;
+}
+
+.table table td {
+  border-top: 1px solid #cccccc;
+  padding: 8px 0;
+  text-align: center;
+}
+
+.table table td .icon {
+  margin-right: 5px;
+}
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,25 @@
+.table {
+  &__content {
+    overflow-x: auto;
+  }
+
+  table {
+    th {
+      min-width: 100px;
+
+      &:nth-child(3) {
+        min-width: 200px;
+      }
+    }
+
+    td {
+      border-top: 1px solid $color-gray;
+      padding: 8px 0;
+      text-align: center;
+
+      .icon {
+        margin-right: 5px;
+      }
+    }
+  }
+}
