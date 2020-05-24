@@ -13,7 +13,7 @@
   <body>
     <nav class="nav">
       <div class="nav__logo">
-        <img src="/images/logo.png" alt="EPS Logo" />
+        <img src="./images/logo.png" alt="EPS Logo" />
         <span>Plataforma de pago online</span>
       </div>
       <div class="nav__user">
@@ -40,15 +40,15 @@
               <i class="icon icon-chart"></i>Estado de cuenta
             </label>
             <div class="content">
-              <h2>Datos del suministro</h2>
-              <div class="suministro">
+              <div class="supply">
+                <h2>Datos del suministro</h2>
                 <div class="item">
                   <span class="item__label">Titular</span>
                   <input
                     type="text"
                     class="item__input"
                     disabled
-                    value="Angelo Leva"
+                    placeholder="Angelo Leva"
                   />
                 </div>
                 <div class="item">
@@ -57,7 +57,7 @@
                     type="text"
                     class="item__input"
                     disabled
-                    value="279071"
+                    placeholder="279071"
                   />
                 </div>
                 <div class="item">
@@ -66,12 +66,13 @@
                     type="text"
                     class="item__input"
                     disabled
-                    value="Calle Tacna 159"
+                    placeholder="Calle Tacna 159"
                   />
                 </div>
               </div>
-              <h2>Datos de pago</h2>
-              <div class="pago">
+
+              <div class="payment-status">
+                <h2>Datos de pago</h2>
                 <div class="item">
                   <span class="item__label">Estado</span>
                   <p class="warning">VENCIDO</p>
@@ -82,7 +83,7 @@
                     type="text"
                     class="item__input"
                     disabled
-                    value="31/05/2020"
+                    placeholder="31/05/2020"
                   />
                 </div>
                 <div class="item">
@@ -91,11 +92,11 @@
                     type="text"
                     class="item__input"
                     disabled
-                    value="272.50"
+                    placeholder="272.50"
                   />
                 </div>
               </div>
-              <div class="payment">
+              <div class="payment-actions">
                 <button onclick="showErrorModal()" class="btn blue" href="/">
                   <i class="icon icon-card"></i>Pagar ahora
                 </button>

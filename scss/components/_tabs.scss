@@ -2,7 +2,7 @@
   position: relative;
   max-width: 340px;
   margin: 30px auto;
-  min-height: 470px;
+  min-height: 520px;
   clear: both;
 
   .tab {
@@ -17,7 +17,12 @@
       padding: 10px;
       border: 1px solid $color-black;
       position: relative;
-      left: 1px;
+      top: -3px;
+
+      .icon {
+        margin-right: 10px;
+        vertical-align: middle;
+      }
     }
 
     .content {
@@ -51,7 +56,7 @@
 
       ~ label {
         background: $color-white;
-        border-bottom: 1px solid $color-black;
+        border-bottom: none;
         z-index: 2;
       }
     }

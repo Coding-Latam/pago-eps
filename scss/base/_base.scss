@@ -1,4 +1,5 @@
 body {
+  color: $color-text;
   font-family: $font-primary;
   margin: 0;
   padding: 0;
@@ -22,6 +23,14 @@ h1 {
 input {
   padding: 0;
   margin: 0;
+
+  &:disabled {
+    opacity: 0.8;
+  }
+
+  &::placeholder {
+    color: #95a5a6;
+  }
 }
 
 p {
