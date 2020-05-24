@@ -39,7 +39,7 @@ h2 {
 
 @media (min-width: 992px) {
   h2 {
-    margin: 0 0 20px;
+    margin: 0 0 40px;
   }
 }
 
@@ -267,7 +267,7 @@ a.btn {
 
 button.blue,
 a.blue {
-  background-color: #2980b9;
+  background-color: #3498db;
   color: #ffffff;
 }
 
@@ -307,7 +307,7 @@ a.blue {
 }
 
 .nav__user {
-  background: #2980b9;
+  background: #3498db;
   border-radius: 50%;
   cursor: pointer;
   padding: 8px;
@@ -350,7 +350,7 @@ a.blue {
   position: relative;
   max-width: 340px;
   margin: 30px auto;
-  min-height: 540px;
+  min-height: 560px;
   clear: both;
 }
 
@@ -528,7 +528,6 @@ form.form-search .btn {
 }
 
 .supply h2 {
-  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -549,6 +548,7 @@ form.form-search .btn {
 }
 
 .payment-actions .btn {
+  font-size: 16px;
   margin: 0 auto;
   width: 220px;
   display: block;
@@ -677,5 +677,15 @@ form.form-search .btn {
   .contact__info {
     display: block;
   }
+}
+
+footer {
+  background-color: #2d3436;
+  padding: 50px 0;
+}
+
+footer p {
+  color: #ffffff;
+  text-align: center;
 }
 /*# sourceMappingURL=styles.css.map */
