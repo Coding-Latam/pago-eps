@@ -9,6 +9,14 @@ body {
   font-family: "Lato", sans-serif;
   margin: 0;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
 }
 
 h1,
@@ -257,6 +265,8 @@ a {
   white-space: nowrap;
   max-width: 200px;
   text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   outline: none;
 }
 
@@ -267,8 +277,13 @@ a.btn {
 
 button.blue,
 a.blue {
-  background-color: #3498db;
+  background-color: #1f5ca9;
   color: #ffffff;
+}
+
+button.blue:hover,
+a.blue:hover {
+  background-color: #3498db;
 }
 
 .nav {
@@ -641,6 +656,10 @@ form.form-search .btn {
   color: #27ae60;
 }
 
+.table table td .icon-download {
+  cursor: pointer;
+}
+
 .contact__content {
   background-color: #ffffff;
   border-radius: 5px;
@@ -704,10 +723,16 @@ form.form-search .btn {
 footer {
   background-color: #2d3436;
   padding: 50px 0;
+  margin-top: auto;
 }
 
 footer p {
   color: #ffffff;
   text-align: center;
+}
+
+footer p a {
+  color: #ffffff;
+  text-decoration: underline;
 }
 /*# sourceMappingURL=styles.css.map */

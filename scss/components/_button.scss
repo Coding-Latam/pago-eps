@@ -8,6 +8,7 @@ a {
   white-space: nowrap;
   max-width: 200px;
   text-decoration: none;
+  transition: 0.3s;
   outline: none;
 
   &.btn {
@@ -15,7 +16,11 @@ a {
   }
 
   &.blue {
-    background-color: $color-blue-dark;
+    background-color: $color-blue-primary;
     color: $color-white;
+
+    &:hover {
+      background-color: #3498db;
+    }
   }
 }
