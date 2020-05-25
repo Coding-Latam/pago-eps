@@ -275,10 +275,11 @@ a.blue {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #ffffff;
+  background-color: #1f5ca9;
   border-bottom: 1px solid #cccccc;
   -webkit-box-shadow: 0 2px 4px 0 rgba(23, 31, 39, 0.1);
           box-shadow: 0 2px 4px 0 rgba(23, 31, 39, 0.1);
+  color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -306,16 +307,37 @@ a.blue {
   margin-left: 10px;
 }
 
-.nav__user {
-  background: #3498db;
-  border-radius: 50%;
+.nav__info {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
-  padding: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.nav__user .icon {
+.nav__info-user {
+  background: #3498db;
+  border-radius: 50%;
+  padding: 8px;
+  float: left;
+}
+
+.nav__info-user .icon {
   color: #ffffff;
   font-size: 18px;
+}
+
+.nav__info span {
+  padding: 8px;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .nav__info span {
+    display: block;
+  }
 }
 
 .nav__settings {

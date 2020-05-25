@@ -1,8 +1,9 @@
 .nav {
   align-items: center;
-  background-color: $color-white;
+  background-color: $color-blue-primary;
   border-bottom: 1px solid $color-gray;
   box-shadow: 0 2px 4px 0 rgba(23, 31, 39, 0.1);
+  color: $color-white;
   display: flex;
   justify-content: space-between;
   padding: 8px 15px;
@@ -21,17 +22,34 @@
     }
   }
 
-  &__user {
-    background: $color-blue-dark;
-    border-radius: 50%;
+  &__info {
+    align-items: center;
     cursor: pointer;
-    padding: 8px;
+    display: flex;
 
-    .icon {
-      color: $color-white;
-      font-size: 18px;
+    &-user {
+      background: $color-blue-dark;
+      border-radius: 50%;
+      padding: 8px;
+      float: left;
+  
+      .icon {
+        color: $color-white;
+        font-size: 18px;
+      }
     }
+
+    span {
+      padding: 8px;
+      display: none;
+
+      @include breakpoint($sm) {
+        display: block;
+      }
+    }
+
   }
+
 
   &__settings {
     display: none;
